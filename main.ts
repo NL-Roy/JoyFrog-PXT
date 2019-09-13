@@ -112,19 +112,19 @@ namespace joyfrog {
                 let arg1 = parseInt(seekNext())
                 joyX = -255 - parseInt(seekNext())
                 joyY = -255 - parseInt(seekNext())
-                if (btnCb[arg1]) {
-                    btnCb[arg1]();
-                }
+                // if (btnCb[arg1]) {
+                //     btnCb[arg1]();
+                // }
                 /*
                 for (let i = 0; i < btnCb.length; i++) {
                     if (btnCb[i].key == arg1) {
                         btnCb[i].fn()
                     }
                 }
+                */
                 if (joyCb) {
                     joyCb();
                 }
-                */
             } else if (cmd == 4) {
                 if (infraRxCb) {
                     infraRxCb(seekNext());
