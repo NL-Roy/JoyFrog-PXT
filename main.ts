@@ -12,13 +12,13 @@ namespace joyfrog {
         //% block=space
         BTN_SPACE = 0x2C,
         //% block=↑
-        //BTN_UP = 0x52,
+        BTN_UP = 0x52,
         //% block=↓
-        //BTN_DOWN = 0x51,
+        BTN_DOWN = 0x51,
         //% block=←
-        //BTN_LEFT = 0x50,
+        BTN_LEFT = 0x50,
         //% block=→
-        //BTN_RIGHT = 0x4f,
+        BTN_RIGHT = 0x4f,
         //% block=X
         BTN_X = 0x1B,
         //% block=Y
@@ -55,9 +55,6 @@ namespace joyfrog {
     type EvtAct = () => void;
 
     let btnCb: { [key: number]: EvtAct } = {};
-
-    let joyCb2: { [key: number]: EvtAct } = {};
-
     // let btnCb: KeyHandler[] = []
 
     export class KeyHandler {
@@ -124,8 +121,8 @@ namespace joyfrog {
                     }
                 }
                 */
-                if (joyCb2[arg1]) {
-                    joyCb2(arg1);
+                if (joyCb) {
+                    joyCb();
                 }
             } else if (cmd == 4) {
                 if (infraRxCb) {
@@ -192,12 +189,6 @@ namespace joyfrog {
     //% weight=97
     export function on_joystick_pushed(handler: () => void): void {
         joyCb = handler;
-    }
-
-    //% blockId=on_joystick_pushed_to_xy block="on Joystick Pushed |%direction"
-    //% weight=98
-    export function on_joystick_pushed_to_xy(direction: JoyDirection, handler: () => void): void {
-        joyCb2[direction] = handler;
     }
 
     //% blockId=joystick_value block="Joystick %dir"
