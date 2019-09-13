@@ -12,13 +12,13 @@ namespace joyfrog {
         //% block=space
         BTN_SPACE = 0x2C,
         //% block=↑
-        BTN_UP = 0x52,
+        //BTN_UP = 0x52,
         //% block=↓
-        BTN_DOWN = 0x51,
+        //BTN_DOWN = 0x51,
         //% block=←
-        BTN_LEFT = 0x50,
+        //BTN_LEFT = 0x50,
         //% block=→
-        BTN_RIGHT = 0x4f,
+        //BTN_RIGHT = 0x4f,
         //% block=X
         BTN_X = 0x1B,
         //% block=Y
