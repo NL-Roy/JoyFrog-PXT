@@ -194,7 +194,7 @@ namespace joyfrog {
         joyCb = handler;
     }
 
-    //% blockId=on_joystick_pushed_to_xy block="on Joystick Pushed XY"
+    //% blockId=on_joystick_pushed_to_xy block="on Joystick Pushed |%direction"
     //% weight=98
     export function on_joystick_pushed_to_xy(direction: JoyDirection, handler: () => void): void {
         joyCb2[direction] = handler;
